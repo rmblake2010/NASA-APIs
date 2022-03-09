@@ -10,11 +10,10 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
 //Controllers & Routes
+app.use('/apis', require('./controllers/apis'))
 
 app.get('/', (req, res) => {
-    res.send(`
-        <h1>Front Page</h1>
-    `)
+    res.redirect('/apis')
 })
 
 app.listen(process.env.PORT)
