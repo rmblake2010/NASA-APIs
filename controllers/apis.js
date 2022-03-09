@@ -6,7 +6,7 @@ const apod = require('../models/APOD')
 
 //Index Page
 router.get('/', (req, res) => {
-    console.log(apod)
+    
     res.send('index page!')
 })
 
